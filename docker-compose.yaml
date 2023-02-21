@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  dynamodb-local:
+    # command: "-jar DynamoDBLocal.jar -inMemory" # In memory db
+    command: "-jar DynamoDBLocal.jar -sharedDb -dbPath ./data" # if you want persistant db
+    image: "amazon/dynamodb-local:latest"
+    container_name: dynamodb-local
+    ports:
+      - "8000:8000"
+    # volumes: # if you want persistant db
+    #   - "./docker/dynamodb:/home/dynamodblocal/data" # if you want persistant db
+    working_dir: /home/dynamodblocal
