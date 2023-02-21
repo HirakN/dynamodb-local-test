@@ -2,6 +2,7 @@
 
 ## Set up local dynaodb
 Create containers to setup local dynamodb endpoint
+
 `docker compose up -d`
 
 ## Create table
